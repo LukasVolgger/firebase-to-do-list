@@ -1,6 +1,16 @@
-<h1>To-do list</h1>
-<input type="text" [(ngModel)]="todoInput"><button (click)="addTodo()">Add To-do</button>
-<ul>
-    <li *ngFor="let todo of todos">{{todo['name']}}</li>
-</ul>
+<form class="example-form">
+    <mat-form-field appearance="fill">
+        <mat-label>Add to list</mat-label>
+        <input matInput placeholder="" type="text" [(ngModel)]="todoInput" name="todoInput">
+    </mat-form-field>
+    <button mat-fab color="primary" (click)="addTodo()"><mat-icon>add</mat-icon></button>
+</form>
+<mat-card>
+    <mat-card-title>To-do</mat-card-title>
+    <mat-card-content>
+        <mat-selection-list>
+            <mat-list-option *ngFor="let todo of todos">{{todo['name']}}</mat-list-option>
+        </mat-selection-list>
+    </mat-card-content>
+</mat-card>
 <router-outlet></router-outlet>
