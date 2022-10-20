@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lv-firebase-to-do-list": {
+      "hosting": {
+        "firebase-to-do-list": [
+          "lv-firebase-to-do-list"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lv-firebase-to-do-list"
+  }
+}
